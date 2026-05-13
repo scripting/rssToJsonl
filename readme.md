@@ -1,5 +1,7 @@
 # RSS to JSONL
 
+This readme was written by Claude Code, reviewed by Dave Winer. Dave wrote the software.
+
 Watch for new items from a set of feeds.
 
 Add each item to the end of a JSONL file on a static server.
@@ -27,10 +29,6 @@ Pandas, DuckDB, Polars, Spark.
 LangChain and LlamaIndex document loaders.
 
 So an RSS-to-JSONL feed plugs into any of these with no adapter code. RSS items flow into the AI world as a native format. That's the interop story.
-
-### Who
-
-This readme was written by Claude Code, reviewed by Dave Winer. Dave wrote the software.
 
 ### Install and run
 
