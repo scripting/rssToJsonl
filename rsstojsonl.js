@@ -72,18 +72,18 @@ function addToJsonL (theItem, theSet) {
 		const jsontext = JSON.stringify (theItem) + "\n";
 		fs.appendFile (f, jsontext, function (err) {
 			if (err) {
-				console.log ("addItemToJsonl: err.message == " + err.message);
+				console.log ("addToJsonL: err.message == " + err.message);
 				}
 			else {
 				fs.readFile (f, "utf8", function (err, jsonltext) {
-					jsonltext = trimJsonl (jsonltext, config.maxLinesPerJsonlFile); //keep it to x lines
 					if (err) {
-						console.log ("addItemToJsonl: err.message == " + err.message);
+						console.log ("addToJsonL: err.message == " + err.message);
 						}
 					else {
+						jsonltext = trimJsonl (jsonltext, config.maxLinesPerJsonlFile); //keep it to x lines
 						s3.newObject (theSet.jsonlPath, jsonltext, "application/jsonl", "public-read", function (err, data) {
 							if (err) {
-								console.log ("addItemToJsonl: err.message == " + err.message);
+								console.log ("addToJsonL: err.message == " + err.message);
 								}
 							else {
 								console.log ("\n" + nowstring () + ": publishing to == " + theSet.jsonlUrl + ", item == " + itemToJson (theItem));
