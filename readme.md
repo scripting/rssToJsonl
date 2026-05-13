@@ -28,6 +28,10 @@ LangChain and LlamaIndex document loaders.
 
 So an RSS-to-JSONL feed plugs into any of these with no adapter code. RSS items flow into the AI world as a native format. That's the interop story.
 
+### Who
+
+This readme was written by Claude Code, reviewed by Dave Winer. Dave wrote the software.
+
 ### Install and run
 
 `npm install` to pull dependencies.
@@ -47,10 +51,6 @@ Main keys:
 `maxLinesPerJsonlFile`: most recent N lines kept in each file.
 
 `sets`: one entry per output file. Each set has `enabled`, `jsonlFilename`, `jsonlPath`, `jsonlUrl`, and a `feedList` of source feed URLs.
-
-### Credit
-
-<i>Note this readme was written by Claude Code, reviewed by Dave Winer. Dave wrote the software. </i>
 
 ### S3
 
