@@ -48,6 +48,10 @@ Main keys:
 
 `sets`: one entry per output file. Each set has `enabled`, `jsonlFilename`, `jsonlPath`, `jsonlUrl`, and a `feedList` of source feed URLs.
 
+### Credit
+
+<i>Note this readme was written by Claude Code, reviewed by Dave Winer. Dave wrote the software. </i>
+
 ### S3
 
 The app uploads each updated JSONL file to S3 via `daves3`. You'll need AWS credentials configured the way `daves3` expects them. Without that, the upload step fails on every new item.
